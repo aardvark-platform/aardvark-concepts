@@ -30,6 +30,8 @@ Topics concerning development environment, tooling, articles and papers can be f
 
 Setup your system according to general aardvark development recommendations, e.g. for [windows](https://github.com/aardvark-platform/aardvark.docs/wiki/Visual-Studio) and for
 [linux](https://github.com/aardvark-platform/aardvark.docs/wiki/Linux-Support).
+
 The setup we are using in all repositories is a F# + [paket](https://fsprojects.github.io/Paket/) standard setup with additional scripts for restoring
 all packages and performing a build from the command line either using `build.cmd` or `./build.sh` (they internally perform `.paket/paket.exe` restore and `msbuild src/*.sln` using [fake](https://fake.build/) and provide special code for packing native dependencies and pushing packages to nuget).
+
 Of course you can use [vscode](https://code.visualstudio.com/). Here we recomment a setup using [ionide](http://ionide.io/).
