@@ -18,6 +18,7 @@ This demo repository should be seen additionally to the more specific examples h
     * [Transformations](https://github.com/aardvark-platform/aardvark.docs/wiki/Transformations)
     * [Images](https://github.com/aardvark-platform/aardvark.docs/wiki/Images)
     * [Colors](https://github.com/aardvark-platform/aardvark.docs/wiki/Colors-and-Color-Spaces)
+   
    Additionaly, there are examples on some important topics, in the [demo folder](https://github.com/aardvark-platform/aardvark.base/tree/master/src/Demo), e.g.:
     * [Incremental primitives for C#](https://github.com/aardvark-platform/aardvark.base/blob/master/src/Demo/IncrementalDemo.CSharp/Program.cs)
     * [Working with PixImages](https://github.com/aardvark-platform/aardvark.base/blob/master/src/Demo/PixImageDemo/Program.cs)
