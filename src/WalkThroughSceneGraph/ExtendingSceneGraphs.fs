@@ -78,7 +78,7 @@ let run () =
 
     let scene = aardvark
     let scene = spheres
-    //let scene = manyObjects
+    let scene = manyObjects
 
     let sg =
         scene
