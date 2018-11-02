@@ -23,7 +23,7 @@ This demo repository should be seen additionally to the more specific examples h
     * [Working with PixImages](https://github.com/aardvark-platform/aardvark.base/blob/master/src/Demo/PixImageDemo/Program.cs)
  - [Aardvark.Media](https://github.com/aardvark-platform/aardvark.media) contains [lots of examples](https://github.com/aardvark-platform/aardvark.media/tree/master/src/Examples%20(dotnetcore)) as well.
 
-Topics concerning development environment, tooling, articles and papers can be found in the [wiki](https://github.com/aardvark-platform/aardvark.docs/wiki) as well. Additionally to [gitter]((https://gitter.im/aardvark-platform/Lobby) chatrooms, we have a [QA-platform: http://ask.aardvark.graphics](http://ask.aardvark.graphics/).
+Topics concerning development environment, tooling, articles and papers can be found in the [wiki](https://github.com/aardvark-platform/aardvark.docs/wiki) as well. Additionally to [gitter](https://gitter.im/aardvark-platform/Lobby) chatrooms, we have a [QA-platform: http://ask.aardvark.graphics](http://ask.aardvark.graphics/).
 
 
 ## How to build
