@@ -39,3 +39,8 @@ The setup we are using in all repositories is a F# + [paket](https://fsprojects.
 all packages and performing a build from the command line either using `build.cmd` or `./build.sh` (they internally perform `.paket/paket.exe` restore and `msbuild src/*.sln` using [fake](https://fake.build/) and provide special code for packing native dependencies and pushing packages to nuget).
 
 Of course you can use [vscode](https://code.visualstudio.com/). Here we recomment a setup using [ionide](http://ionide.io/).
+
+## Quickstart for using aardvark platform libraries
+
+We provide a [template repository](https://github.com/aardvark-platform/template). It provides a script which creates a repository with ready to go aardvark dependencies. The setup can be seen [here](https://www.youtube.com/watch?v=OEvQH0Yy1iM).
+The setup however is pretty standard. The open source aardvark libraries can be [queried on nuget](https://www.nuget.org/packages?q=aardvark). Of course you can use nuget or visual studio to download the packages, though we recommend using [paket](https://fsprojects.github.io/Paket/).
