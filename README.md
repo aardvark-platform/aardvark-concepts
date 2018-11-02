@@ -25,6 +25,10 @@ This demo repository should be seen additionally to the more specific examples h
 
 Topics concerning development environment, tooling, articles and papers can be found in the [wiki](https://github.com/aardvark-platform/aardvark.docs/wiki) as well. Additionally to [gitter](https://gitter.im/aardvark-platform/Lobby) chatrooms, we have a [QA-platform: http://ask.aardvark.graphics](http://ask.aardvark.graphics/).
 
+Aardvark.Rendering is used in industry and research projects, e.g. [Hilite](). Videos showcasing aardvark functionality can be found here:
+ - [Hilite lighting design](https://www.youtube.com/watch?v=WPgy4ZZ_i2w&t=231s), [Hilite Architectural Visualization](https://www.youtube.com/watch?v=5JGXM7jDOFM)
+ - [Pro3D](http://pro3d.space/)
+ - [Aardvark programming showcase](https://www.youtube.com/watch?v=QjVRJworUOw)
 
 ## How to build
 
