@@ -12,8 +12,7 @@ This repository is part of the open-source [Aardvark platform](https://github.co
 
 
 This demo repository should be seen additionally to the more specific examples hosted in the respective repositories such as:
- - [Aardvark.Rendering](https://github.com/aardvark-platform/aardvark.rendering) provides most platform-independent examples for [.net core](https://github.com/aardvark-platform/aardvark.rendering/tree/master/src/Scratch%20(netcore)) but also some examples
-   running in [.net framework](https://github.com/aardvark-platform/aardvark.rendering/tree/master/src/Scratch%20(net471)).
+ - [Aardvark.Rendering](https://github.com/aardvark-platform/aardvark.rendering) provides a huge set of nice and platform-independent examples for [.net core](https://github.com/aardvark-platform/aardvark.rendering/tree/master/src/Examples%20(netcore)) ranging from [HelloWorld](https://github.com/aardvark-platform/aardvark.rendering/blob/master/src/Examples%20(netcore)/00%20-%20HelloWorld/Program.fs) to more complex examples such as [n-body using compute](https://github.com/aardvark-platform/aardvark.rendering/blob/master/src/Examples%20(netcore)/10%20-%20NBodyCompute/Program.fs).
  - [Aardvark.Base](https://github.com/aardvark-platform/aardvark.base)'s documentation is scattered in the rest of the examples but cheatsheets for some important topics can be found in the [wiki](https://github.com/aardvark-platform/aardvark.docs/wiki) e.g.:
     * [Vectores and Matrices](https://github.com/aardvark-platform/aardvark.docs/wiki/Vectors-and-Matrices)
     * [Transformations](https://github.com/aardvark-platform/aardvark.docs/wiki/Transformations)
