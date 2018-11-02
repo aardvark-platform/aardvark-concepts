@@ -30,7 +30,7 @@ Aardvark.Rendering is used in industry and research projects, e.g. [Hilite](). V
  - [Pro3D](http://pro3d.space/)
  - [Aardvark programming showcase](https://www.youtube.com/watch?v=QjVRJworUOw)
 
-## How to build
+## How to build this demo repository
 
 Setup your system according to general aardvark development recommendations, e.g. for [windows](https://github.com/aardvark-platform/aardvark.docs/wiki/Visual-Studio) and for
 [linux](https://github.com/aardvark-platform/aardvark.docs/wiki/Linux-Support).
@@ -43,4 +43,8 @@ Of course you can use [vscode](https://code.visualstudio.com/). Here we recommen
 ## Quickstart for using aardvark platform libraries
 
 We provide a [template repository](https://github.com/aardvark-platform/template). It provides a script which creates a repository with ready to go aardvark dependencies. The setup can be seen [here](https://www.youtube.com/watch?v=OEvQH0Yy1iM).
-The setup however is pretty standard. The open source aardvark libraries can be [queried on nuget](https://www.nuget.org/packages?q=aardvark). Of course you can use nuget or visual studio to download the packages, though we recommend using [paket](https://fsprojects.github.io/Paket/).
+
+## Using aardvark libraries in your project
+
+We use a standard deployment mechanism via nuget packages maintained by the aardvark open source community.
+The open source aardvark libraries can be [queried on nuget](https://www.nuget.org/packages?q=aardvark). Of course you can use nuget or visual studio to download the packages, though we recommend using [paket](https://fsprojects.github.io/Paket/).
