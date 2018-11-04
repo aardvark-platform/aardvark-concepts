@@ -10,11 +10,12 @@ type DemoType =
     | SceneGraphConcept
     | ExtendingSceneGraphs
     | DynamicPointCloud
+    | DynamicSceneData
 
 [<EntryPoint>]
 let main argv = 
  
-    let demo = DynamicPointCloud // SceneGraphConcept
+    let demo = DemoType.DynamicSceneData
 
     // first we need to initialize Aardvark's core components
     Ag.initialize()
@@ -31,4 +32,8 @@ let main argv =
 
         | DynamicPointCloud -> 
             DynamicPointCloud.run()
+            0
+
+        | DynamicSceneData -> 
+            DynamicSceneData.run()
             0
