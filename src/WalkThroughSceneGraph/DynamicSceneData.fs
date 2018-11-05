@@ -44,11 +44,15 @@ let run () =
                 yield V3d(rnd.NextDouble(),rnd.NextDouble(),rnd.NextDouble())
        ]
        
-    win.Keyboard.KeyDown(Keys.G).Values.Add(fun _ -> 
-        transact (fun _ -> 
-            let newPos = V3d(rnd.NextDouble(),rnd.NextDouble(),rnd.NextDouble())
-            objectPositions.Add newPos |> ignore
-        )
+    win.Keyboard.DownWithRepeats.Values.Add(fun k -> 
+        match k with
+            | Keys.G -> 
+                transact (fun _ -> 
+                    let newPos = V3d(rnd.NextDouble(),rnd.NextDouble(),rnd.NextDouble())
+                    objectPositions.Add newPos |> ignore
+                )
+            | _ ->
+                ()
     )
 
     let objects = 

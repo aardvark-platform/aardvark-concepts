@@ -88,11 +88,11 @@ let run () =
                     DefaultSurfaces.constantColor C4f.Red |> toEffect
                     DefaultSurfaces.simpleLighting        |> toEffect
                 ]
+            |> Sg.andAlso (aardvark |> Sg.onOff (Mod.constant false))
             // extract our viewTrafo from the dynamic cameraView and attach it to the scene graphs viewTrafo 
             |> Sg.viewTrafo (cameraView  |> Mod.map CameraView.viewTrafo )
             // compute a projection trafo, given the frustum contained in frustum
             |> Sg.projTrafo (frustum |> Mod.map Frustum.projTrafo    )
-
 
     let renderTask = 
         // compile the scene graph into a render task

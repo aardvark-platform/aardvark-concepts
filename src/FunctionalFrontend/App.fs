@@ -10,11 +10,11 @@ open FunctionalFrontend.Model
 
 type Message =
     | ToggleModel
-    | CameraMessage of CameraControllerMessage
+    | CameraMessage of FreeFlyController.Message
 
 module App =
     
-    let initial = { currentModel = Box; cameraState = CameraController.initial }
+    let initial = { currentModel = Box; cameraState = FreeFlyController.initial }
 
     let update (m : Model) (msg : Message) =
         match msg with
@@ -24,7 +24,7 @@ module App =
                     | Sphere -> { m with currentModel = Box }
 
             | CameraMessage msg ->
-                { m with cameraState = CameraController.update m.cameraState msg }
+                { m with cameraState = FreeFlyController.update m.cameraState msg }
 
     let view (m : MModel) =
 
@@ -50,7 +50,7 @@ module App =
             ]
 
         body [] [
-            CameraController.controlledControl m.cameraState CameraMessage frustum (AttributeMap.ofList att) sg
+            FreeFlyController.controlledControl m.cameraState CameraMessage frustum (AttributeMap.ofList att) sg
 
             div [style "position: fixed; left: 20px; top: 20px"] [
                 button [onClick (fun _ -> ToggleModel)] [text "Toggle Model"]
@@ -63,6 +63,6 @@ module App =
             initial = initial
             update = update
             view = view
-            threads = Model.Lens.cameraState.Get >> CameraController.threads >> ThreadPool.map CameraMessage
+            threads = Model.Lens.cameraState.Get >> FreeFlyController.threads >> ThreadPool.map CameraMessage
             unpersist = Unpersist.instance
         }

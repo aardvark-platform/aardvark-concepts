@@ -31,10 +31,14 @@ let run () =
     let currentBuffer = generateVertices () |> Mod.init
     let verticesBufferView = BufferView(currentBuffer, typeof<V3f>)
 
-    win.Keyboard.KeyDown(Keys.G).Values.Add(fun _ -> 
-        transact (fun _ -> 
-            currentBuffer.Value <- generateVertices()
-        )
+    win.Keyboard.DownWithRepeats.Values.Add(fun k -> 
+        match k with
+            | Keys.G -> 
+                transact (fun _ -> 
+                    currentBuffer.Value <- generateVertices()
+                )
+            | _ ->
+                ()
     )
 
     let sg = 
