@@ -77,8 +77,8 @@ let run () =
         ] |> Sg.ofSeq
 
     let scene = aardvark
-    let scene = spheres
-    let scene = manyObjects
+    //let scene = spheres
+    //let scene = manyObjects
 
     let sg =
         scene

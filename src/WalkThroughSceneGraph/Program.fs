@@ -16,7 +16,7 @@ type DemoType =
 [<EntryPoint>]
 let main argv = 
  
-    let demo = DemoType.SceneGraphConcept
+    let demo = DemoType.ExtendingSceneGraphs
 
     // first we need to initialize Aardvark's core components
     Ag.initialize()
