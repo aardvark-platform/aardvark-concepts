@@ -11,11 +11,12 @@ type DemoType =
     | ExtendingSceneGraphs
     | DynamicPointCloud
     | DynamicSceneData
+    | AdaptiveDSL
 
 [<EntryPoint>]
 let main argv = 
  
-    let demo = DemoType.DynamicSceneData
+    let demo = DemoType.SceneGraphConcept
 
     // first we need to initialize Aardvark's core components
     Ag.initialize()
@@ -36,4 +37,8 @@ let main argv =
 
         | DynamicSceneData -> 
             DynamicSceneData.run()
+            0
+
+        | AdaptiveDSL -> 
+            AdaptiveDSLApproach.run()
             0

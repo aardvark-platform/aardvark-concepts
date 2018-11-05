@@ -11,6 +11,7 @@
     <OutputPath>..\..\bin\Debug\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AdaptiveDSLApproach.fs" />
     <Compile Include="DynamicPointCloud.fs" />
     <Compile Include="DynamicSceneData.fs" />
     <Compile Include="LevelOfDetail.fs" />
