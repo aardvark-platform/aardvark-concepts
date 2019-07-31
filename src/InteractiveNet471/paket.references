@@ -1,0 +1,12 @@
+FSharp.Core
+
+Aardvark.Base
+Aardvark.Base.Incremental
+Aardvark.Base.FSharp
+
+Aardvark.Base.Rendering
+Aardvark.SceneGraph
+Aardvark.SceneGraph.IO
+
+Aardvark.Application.WinForms.GL
+Aardvark.Application.WinForms.Vulkan

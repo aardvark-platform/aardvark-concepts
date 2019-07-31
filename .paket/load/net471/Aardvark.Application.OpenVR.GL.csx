@@ -1,0 +1,17 @@
+namespace PaketLoadScripts
+
+#load "Aardvark.Application.csx" 
+#load "Aardvark.Application.OpenVR.csx" 
+#load "Aardvark.Application.Slim.csx" 
+#load "Aardvark.Application.Slim.GL.csx" 
+#load "Aardvark.Base.Essentials.csx" 
+#load "Aardvark.Base.Incremental.csx" 
+#load "Aardvark.Base.Rendering.csx" 
+#load "Aardvark.Base.Runtime.csx" 
+#load "Aardvark.Rendering.GL.csx" 
+#load "Aardvark.SceneGraph.csx" 
+#load "FShade.Core.csx" 
+#load "FShade.GLSL.csx" 
+#load "Unofficial.OpenTK.csx" 
+#load "Unofficial.OpenVR.csx" 
+#r "../../../packages/Aardvark.Application.OpenVR.GL/lib/netstandard2.0/Aardvark.Application.OpenVR.GL.dll" 
