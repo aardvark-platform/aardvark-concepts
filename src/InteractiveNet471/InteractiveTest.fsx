@@ -1,6 +1,5 @@
 ﻿#if INTERACTIVE
 #load @"..\..\.paket\load\net471\main.group.fsx"
-#r "System.IO.Compression.dll"
 #else
 #endif
 
