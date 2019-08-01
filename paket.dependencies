@@ -28,6 +28,7 @@ nuget Aardvark.Compiler.DomainTypes.MSBuild ~> 4.3.0
 
 nuget Aardium                               ~> 1.0.21
 
+github aardvark-platform/aardvark.rendering  src/Application/Aardvark.Application.Utilities/FsiHelper.fsx
 
 group Build
 framework: net45
