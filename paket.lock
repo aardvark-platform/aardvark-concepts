@@ -581,7 +581,7 @@ NUGET
       System.Xml.XDocument (>= 4.3) - restriction: || (&& (== net471) (>= dnxcore50)) (&& (== net471) (< net46)) (== netcoreapp2.0) (== netstandard2.0)
       System.Xml.XmlDocument (>= 4.3)
       System.Xml.XmlSerializer (>= 4.3) - restriction: || (&& (== net471) (>= dnxcore50)) (&& (== net471) (< net46)) (== netcoreapp2.0) (== netstandard2.0)
-    System.Reactive (4.1.5)
+    System.Reactive (4.1.6)
       System.Runtime.InteropServices.WindowsRuntime (>= 4.3) - restriction: || (&& (== net471) (< net46)) (== netcoreapp2.0) (== netstandard2.0)
       System.Threading.Tasks.Extensions (>= 4.5.2)
       System.ValueTuple (>= 4.5) - restriction: || (== net471) (&& (== netcoreapp2.0) (>= net46)) (&& (== netcoreapp2.0) (>= uap10.0)) (&& (== netstandard2.0) (>= net46)) (&& (== netstandard2.0) (>= uap10.0))
@@ -848,7 +848,7 @@ NUGET
     Unofficial.Typography (0.0.3)
 GITHUB
   remote: aardvark-platform/aardvark.rendering
-    src/Application/Aardvark.Application.Utilities/FsiHelper.fsx (212de2765701b2802848ce540d02133cc3128458)
+    src/Application/Aardvark.Application.Utilities/FsiHelper.fsx (fa89632a94a9338cb25cd886d7256757402c371d)
 GROUP Build
 CONTENT: NONE
 RESTRICTION: == net45
