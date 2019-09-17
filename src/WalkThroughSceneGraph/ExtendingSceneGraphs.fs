@@ -36,7 +36,7 @@ let run () =
     // animations - seealso: https://github.com/aardvark-platform/aardvark.docs/wiki/animation
     let cameraView = DefaultCameraController.control win.Mouse win.Keyboard win.Time initialView
     
-    let modelPath = Path.combine [".."; ".."; ".."; "data"; "aardvark"; "aardvark.obj" ]
+    let modelPath = Path.combine [__SOURCE_DIRECTORY__; ".."; ".."; "data"; "aardvark"; "aardvark.obj" ]
 
     let aardvark = 
         Loader.Assimp.load modelPath

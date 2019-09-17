@@ -22,7 +22,7 @@ let main args =
 
     WebPart.startServer 4321 [
         MutableApp.toWebPart' app.Runtime false (App.start App.app)
-    ]
+    ] |> ignore
     
     Aardium.run {
         title "Aardvark rocks \\o/"
