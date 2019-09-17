@@ -10,7 +10,7 @@
 [Status](https://github.com/aardvarkplatform/aardvark.docs/wiki/Status)
 
 This repository is part of the open-source [Aardvark platform](https://github.com/aardvark-platform/aardvark.docs/wiki) for visual computing, real-time graphics and visualization and contains some simple demos using different parts of the aardvark platform and shows the interplay of the the platform repositories:
- - [aardvark.renering](https://github.com/aardvark-platform/aardvark.rendering) for efficient rendering.
+ - [aardvark.rendering](https://github.com/aardvark-platform/aardvark.rendering) for efficient rendering.
  - [aardvark.media](https://github.com/aardvark-platform/aardvark.media) for purely functional high performance user interfaces and interactions.
 
 
