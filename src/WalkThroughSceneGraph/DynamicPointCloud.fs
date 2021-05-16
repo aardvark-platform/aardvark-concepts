@@ -1,8 +1,8 @@
 ﻿module DynamicPointCloud
 
 open Aardvark.Base
-open Aardvark.Base.Rendering
-open Aardvark.Base.Incremental
+open Aardvark.Rendering
+open FSharp.Data.Adaptive
 open Aardvark.SceneGraph
 open Aardvark.Application
 
@@ -28,7 +28,7 @@ let run () =
         )
         ArrayBuffer(points) :> IBuffer
 
-    let currentBuffer = generateVertices () |> Mod.init
+    let currentBuffer = generateVertices () |> cval
     let verticesBufferView = BufferView(currentBuffer, typeof<V3f>)
 
     win.Keyboard.DownWithRepeats.Values.Add(fun k -> 

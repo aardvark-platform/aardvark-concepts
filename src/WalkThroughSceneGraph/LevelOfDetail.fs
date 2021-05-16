@@ -1,10 +1,11 @@
 ﻿namespace Aardvark.SceneGraph
 
 open Aardvark.Base
-open Aardvark.Base.Incremental
 open Aardvark.Base.Ag
 open Aardvark.SceneGraph
 open Aardvark.SceneGraph.Semantics
+open FSharp.Data.Adaptive
+open Aardvark.Rendering
 
 type LodScope = { cameraPosition : V3d; bb : Box3d }
 type LodNode(viewDecider : (LodScope -> bool), low : ISg, high : ISg) =
@@ -14,18 +15,18 @@ type LodNode(viewDecider : (LodScope -> bool), low : ISg, high : ISg) =
     member x.High = high
     member x.ViewDecider = viewDecider
 
-[<Semantic>]
+[<Rule>]
 type LodSem() =
 
-    member x.RenderObjects(node : LodNode) : aset<IRenderObject> =
+    member x.RenderObjects(node : LodNode, scope : Ag.Scope) : aset<IRenderObject> =
         aset {
-            let bb       = node.Low.GlobalBoundingBox()
-            let lowQuality  = node.Low.RenderObjects()
-            let highQuality = node.High.RenderObjects()
+            let bb       = node.Low.GlobalBoundingBox(scope)
+            let lowQuality  = node.Low.RenderObjects(scope)
+            let highQuality = node.High.RenderObjects(scope)
 
-            let! camera = node.CameraLocation
+            let! camera = scope.CameraLocation
 
-            if node.ViewDecider { cameraPosition = camera; bb = Mod.force bb } then 
+            if node.ViewDecider { cameraPosition = camera; bb = AVal.force bb } then 
                 yield! highQuality
             else    
                 yield! lowQuality

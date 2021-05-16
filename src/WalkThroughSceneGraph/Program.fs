@@ -1,7 +1,7 @@
 ﻿open System
 open Aardvark.Base
-open Aardvark.Base.Rendering
-open Aardvark.Base.Incremental
+open Aardvark.Rendering
+open FSharp.Data.Adaptive
 open Aardvark.SceneGraph
 open Aardvark.Application
 open Aardvark.Application.Slim
@@ -19,7 +19,6 @@ let main argv =
     let demo = DemoType.ExtendingSceneGraphs
 
     // first we need to initialize Aardvark's core components
-    Ag.initialize()
     Aardvark.Init()
 
     match demo with

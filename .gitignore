@@ -13,3 +13,5 @@ bin/Debug
 /.paket/paket.exe
 /Aardvark.log
 /src/FunctionalFrontend/*.domaincache
+/.paket
+/.fake

@@ -7,11 +7,13 @@
  */
 using System;
 using Aardvark.Base;
-using Aardvark.Base.Incremental.CSharp;
+using Aardvark.Rendering;
+using FSharp.Data.Adaptive;
+using CSharp.Data.Adaptive;
 using Aardvark.SceneGraph;
 using Aardvark.SceneGraph.CSharp;
 using Aardvark.Application.WinForms;
-using Effects = Aardvark.Base.Rendering.Effects;
+using Effects = Aardvark.Rendering.Effects;
 
 namespace PlainAardvarkRendering_NetFramework
 {
@@ -59,7 +61,7 @@ namespace PlainAardvarkRendering_NetFramework
                 //              drawNode               (performs draw call using attributes inherited along scene graph edges)
                 var sceneWithIndexBuffer =
                         new Sg.VertexIndexApplicator(
-                                new BufferView(Mod.Constant(indexBuffer), typeof(int)), 
+                                new BufferView(AValModule.constant(indexBuffer), typeof(int)), 
                                 drawNode
                         );
 
@@ -73,7 +75,7 @@ namespace PlainAardvarkRendering_NetFramework
                     .VertexAttribute(DefaultSemantic.Colors, colors) 
                     // next, we apply the shaders (this way, the shader becomes the root node -> all children now use
                     // this so called effect (a pipeline shader which combines all shader stages into one object)
-                    .WithEffects(new[] { Aardvark.Base.Rendering.Effects.VertexColor.Effect });
+                    .WithEffects(new[] { Aardvark.Rendering.Effects.VertexColor.Effect });
 
                 // next we use the aardvark scene graph compiler to construct a so called render task,
                 // an optimized representation of the scene graph.
@@ -91,8 +93,8 @@ namespace PlainAardvarkRendering_NetFramework
     {
         public static ISg WithVertexAttribute(this ISg sg, string semantic, Array data)
         {
-            var bufferView = new BufferView(Mod.Constant((IBuffer)new ArrayBuffer(data)), data.GetType().GetElementType());
-            return new Sg.VertexAttributeApplicator(Symbol.Create(semantic), bufferView, Mod.Constant(sg));
+            var bufferView = new BufferView(AValModule.constant((IBuffer)new ArrayBuffer(data)), data.GetType().GetElementType());
+            return new Sg.VertexAttributeApplicator(Symbol.Create(semantic), bufferView, AValModule.constant(sg));
         }
     }
 }

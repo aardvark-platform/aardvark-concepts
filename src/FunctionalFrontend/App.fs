@@ -1,11 +1,11 @@
 namespace FunctionalFrontend
 
+open FSharp.Data.Adaptive
 open System
 open Aardvark.Base
-open Aardvark.Base.Incremental
 open Aardvark.UI
 open Aardvark.UI.Primitives
-open Aardvark.Base.Rendering
+open Aardvark.Rendering
 open FunctionalFrontend.Model
 
 type Message =
@@ -26,17 +26,17 @@ module App =
             | CameraMessage msg ->
                 { m with cameraState = FreeFlyController.update m.cameraState msg }
 
-    let view (m : MModel) =
+    let view (m : AdaptiveModel) =
 
         let frustum = 
             Frustum.perspective 60.0 0.1 100.0 1.0 
-                |> Mod.constant
+                |> AVal.constant
 
         let sg =
-            m.currentModel |> Mod.map (fun v ->
+            m.currentModel |> AVal.map (fun v ->
                 match v with
-                    | Box -> Sg.box (Mod.constant C4b.Red) (Mod.constant (Box3d(-V3d.III, V3d.III)))
-                    | Sphere -> Sg.sphere 5 (Mod.constant C4b.Green) (Mod.constant 1.0)
+                    | Box -> Sg.box (AVal.constant C4b.Red) (AVal.constant (Box3d(-V3d.III, V3d.III)))
+                    | Sphere -> Sg.sphere 5 (AVal.constant C4b.Green) (AVal.constant 1.0)
             )
             |> Sg.dynamic
             |> Sg.shader {
@@ -63,6 +63,6 @@ module App =
             initial = initial
             update = update
             view = view
-            threads = Model.Lens.cameraState.Get >> FreeFlyController.threads >> ThreadPool.map CameraMessage
+            threads = fun m -> m.cameraState |> FreeFlyController.threads |> ThreadPool.map CameraMessage
             unpersist = Unpersist.instance
         }

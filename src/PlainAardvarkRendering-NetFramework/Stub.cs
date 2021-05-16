@@ -3,11 +3,12 @@
  */
 using System;
 using Aardvark.Base;
-using Aardvark.Base.Incremental.CSharp;
 using Aardvark.SceneGraph;
 using Aardvark.SceneGraph.CSharp;
 using Aardvark.Application.WinForms;
-using Effects = Aardvark.Base.Rendering.Effects;
+using Effects = Aardvark.Rendering.Effects;
+using Aardvark.Rendering;
+using FSharp.Data.Adaptive;
 
 namespace PlainAardvarkRendering_NetFramework
 {
@@ -29,8 +30,8 @@ namespace PlainAardvarkRendering_NetFramework
     {
         public static ISg WithVertexAttributeStub(this ISg sg, string semantic, Array data)
         {
-            var bufferView = new BufferView(Mod.Constant((IBuffer)new ArrayBuffer(data)), data.GetType().GetElementType());
-            return new Sg.VertexAttributeApplicator(Symbol.Create(semantic), bufferView, Mod.Constant(sg));
+            var bufferView = new BufferView(AValModule.constant((IBuffer)new ArrayBuffer(data)), data.GetType().GetElementType());
+            return new Sg.VertexAttributeApplicator(Symbol.Create(semantic), bufferView, AValModule.constant(sg));
         }
     }
 

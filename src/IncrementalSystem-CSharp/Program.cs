@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Aardvark.Base;
-using Aardvark.Base.Incremental;
-using Aardvark.Base.Incremental.CSharp;
+using FSharp.Data.Adaptive;
+using CSharp.Data.Adaptive;
 
 namespace IncrementalSystem_CSharp
 {
@@ -11,7 +11,7 @@ namespace IncrementalSystem_CSharp
         static void Main(string[] args)
         {
             // Create a modref cell. can be changed via side effects
-            var input = Mod.Init(10);
+            var input = new ChangeableValue<int>(10);
 
             var output = input.Map(x => x * 2);
 
@@ -23,7 +23,7 @@ namespace IncrementalSystem_CSharp
             Console.WriteLine($"output was: {output.GetValue()}"); // F# equivalent: Mod.force : IMod<'a> -> 'a
             // output was: 20
 
-            using (Adaptive.Transaction)
+            using (Adaptive.Transact)
             {
                 input.Value = 20;
             }
@@ -41,7 +41,7 @@ namespace IncrementalSystem_CSharp
 
             // the same works for collection types, e.g. an unordered set
             // can be created as such:
-            var inputSet = new ChangeableSet<int>(new List<int> { 1, 2, 100 });
+            var inputSet = new ChangeableHashSet<int>(new List<int> { 1, 2, 100 });
 
             // similarly to LINQ, there are extensions for incrementally 
             // reacting to changes on the input set.
@@ -54,7 +54,7 @@ namespace IncrementalSystem_CSharp
             Console.WriteLine();
 
             // again, atomic modifications can be submitted using a transaction.
-            using (Adaptive.Transaction)
+            using (Adaptive.Transact)
             {
                 inputSet.AddRange(new List<int>() { 3, 10000 });
             }

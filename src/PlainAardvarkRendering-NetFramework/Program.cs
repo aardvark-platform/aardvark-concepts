@@ -1,9 +1,8 @@
 ﻿using Aardvark.Base;
-using Aardvark.Base.Incremental.CSharp;
 using Aardvark.SceneGraph;
 using Aardvark.SceneGraph.CSharp;
 using Aardvark.Application.WinForms;
-using Effects = Aardvark.Base.Rendering.Effects;
+using Effects = Aardvark.Rendering.Effects;
 
 namespace PlainAardvarkRendering_NetFramework
 {

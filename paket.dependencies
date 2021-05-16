@@ -1,36 +1,38 @@
-framework: netstandard2.0, net471, netcoreapp2.0
+framework: netstandard2.0, net471, netcoreapp3.1
 source https://api.nuget.org/v3/index.json
 
-nuget FSharp.Core                           ~> 4.6.2
+nuget FSharp.Core                           ~> 4.7.0
+
+nuget FSharp.Data.Adaptive                  ~> 1.2.6
+nuget CSharp.Data.Adaptive                  ~> 1.2.6
+                           
+nuget Aardvark.Base                         ~> 5.1.10
+nuget Aardvark.Base.Incremental             ~> 5.1.10
+nuget Aardvark.Base.FSharp                  ~> 5.1.10
                                             
-nuget Aardvark.Base                         ~> 4.5.15
-nuget Aardvark.Base.Incremental             ~> 4.5.15
-nuget Aardvark.Base.FSharp                  ~> 4.5.15
-                                            
-nuget Aardvark.Base.Rendering               ~> 4.11.7
-nuget Aardvark.SceneGraph                   ~> 4.11.7
-nuget Aardvark.SceneGraph.IO                ~> 4.11.7
-nuget Aardvark.Application.Slim             ~> 4.11.7
-nuget Aardvark.Application.Slim.GL          ~> 4.11.7
-nuget Aardvark.Application.Slim.Vulkan      ~> 4.11.7
-nuget Aardvark.Application.Utilities        ~> 4.11.7
-nuget Aardvark.Application.WinForms.GL      ~> 4.11.7
-nuget Aardvark.Application.WinForms.Vulkan  ~> 4.11.7
+nuget Aardvark.Rendering                    ~> 5.1.11
+nuget Aardvark.SceneGraph                   ~> 5.1.11
+nuget Aardvark.SceneGraph.IO                ~> 5.1.11
+nuget Aardvark.Application.Slim             ~> 5.1.11
+nuget Aardvark.Application.Slim.GL          ~> 5.1.11
+nuget Aardvark.Application.Slim.Vulkan      ~> 5.1.11
+nuget Aardvark.Application.Utilities        ~> 5.1.11
+nuget Aardvark.Application.WinForms.GL      ~> 5.1.11
+nuget Aardvark.Application.WinForms.Vulkan  ~> 5.1.11
 
                                             
-nuget Aardvark.Service                      ~> 4.5.14
-nuget Aardvark.UI                           ~> 4.5.14
-nuget Aardvark.UI.Primitives                ~> 4.5.14
+nuget Aardvark.Service                      ~> 5.1.5
+nuget Aardvark.UI                           ~> 5.1.5
+nuget Aardvark.UI.Primitives                ~> 5.1.5
 
-nuget Aardvark.Compiler.DomainTypes.MSBuild ~> 4.3.0
+nuget Adaptify.MSBuild                      ~> 1.0.8
 
-nuget Aardium                               ~> 1.0.21
+nuget Aardium                               ~> 2.0.5
 
 github aardvark-platform/aardvark.rendering  src/Application/Aardvark.Application.Utilities/FsiHelper.fsx
 
-group Build
-framework: net45
-content: none
-source https://api.nuget.org/v3/index.json
 
-github aardvark-platform/aardvark.fake:v4-temp
+group Build
+framework: netstandard2.0
+source https://api.nuget.org/v3/index.json
+github aardvark-platform/aardvark.fake:v511

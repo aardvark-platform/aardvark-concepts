@@ -1,8 +1,8 @@
 namespace FunctionalFrontend.Model
 
+open Adaptify
 open System
 open Aardvark.Base
-open Aardvark.Base.Incremental
 open Aardvark.UI.Primitives
 
 type Primitive =
@@ -10,7 +10,7 @@ type Primitive =
     | Sphere
 
 
-[<DomainType>]
+[<ModelType>]
 type Model =
     {
         currentModel    : Primitive

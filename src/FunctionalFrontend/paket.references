@@ -4,7 +4,7 @@ Aardvark.Base
 Aardvark.Base.Incremental
 Aardvark.Base.FSharp
 
-Aardvark.Base.Rendering
+Aardvark.Rendering
 Aardvark.Application.Slim
 Aardvark.Application.Slim.GL
 Aardvark.Application.Slim.Vulkan
@@ -14,5 +14,5 @@ Aardvark.SceneGraph.IO
 Aardvark.Service
 Aardvark.UI
 Aardvark.UI.Primitives
-Aardvark.Compiler.DomainTypes.MSBuild
+Adaptify.MSBuild
 Aardium

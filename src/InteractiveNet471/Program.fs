@@ -1,7 +1,7 @@
 ﻿open System
 open Aardvark.Base
-open Aardvark.Base.Rendering
-open Aardvark.Base.Incremental
+open Aardvark.Rendering
+open FSharp.Data.Adaptive
 open Aardvark.SceneGraph
 open Aardvark.Application
 open Aardvark.Application.WinForms
@@ -10,7 +10,6 @@ open Aardvark.Application.WinForms
 let main argv = 
  
     // first we need to initialize Aardvark's core components
-    Ag.initialize()
     Aardvark.Init()
 
     // create an OpenGL/Vulkan application. Use the use keyword (using in C#) in order to
@@ -31,7 +30,7 @@ let main argv =
         win.Sizes 
             // construct a standard perspective frustum (60 degrees horizontal field of view,
             // near plane 0.1, far plane 50.0 and aspect ratio x/y.
-            |> Mod.map (fun s -> Frustum.perspective 60.0 0.1 50.0 (float s.X / float s.Y))
+            |> AVal.map (fun s -> Frustum.perspective 60.0 0.1 50.0 (float s.X / float s.Y))
 
     // create a controlled camera using the window mouse and keyboard input devices
     // the window also provides a so called time mod, which serves as tick signal to create
@@ -58,7 +57,7 @@ let main argv =
 
     let sg =
         Sg.box' C4b.White (Box3d.FromCenterAndSize(V3d.OOO,V3d.III)) 
-            |> Sg.trafo (Trafo3d.RotationZInDegrees 45.0 |> Mod.constant)
+            |> Sg.trafo (Trafo3d.RotationZInDegrees 45.0 |> AVal.constant)
             // here we use fshade to construct a shader: https://github.com/aardvark-platform/aardvark.docs/wiki/FShadeOverview
             |> Sg.effect [
                     DefaultSurfaces.trafo                 |> toEffect
@@ -66,9 +65,9 @@ let main argv =
                     DefaultSurfaces.simpleLighting        |> toEffect
                 ]
             // extract our viewTrafo from the dynamic cameraView and attach it to the scene graphs viewTrafo 
-            |> Sg.viewTrafo (cameraView  |> Mod.map CameraView.viewTrafo )
+            |> Sg.viewTrafo (cameraView  |> AVal.map CameraView.viewTrafo )
             // compute a projection trafo, given the frustum contained in frustum
-            |> Sg.projTrafo (frustum |> Mod.map Frustum.projTrafo    )
+            |> Sg.projTrafo (frustum |> AVal.map Frustum.projTrafo    )
 
 
     let renderTask = 

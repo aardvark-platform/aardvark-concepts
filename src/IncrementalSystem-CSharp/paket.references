@@ -3,3 +3,5 @@ FSharp.Core
 Aardvark.Base
 Aardvark.Base.Incremental
 Aardvark.Base.FSharp
+FSharp.Data.Adaptive 
+CSharp.Data.Adaptive 

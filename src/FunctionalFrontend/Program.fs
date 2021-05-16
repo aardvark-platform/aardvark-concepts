@@ -13,7 +13,6 @@ open System
 
 [<EntryPoint>]
 let main args =
-    Ag.initialize()
     Aardvark.Init()
     Aardium.init()
 
