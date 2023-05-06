@@ -1,6 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/iw34n5v1dbl330jl?svg=true)](https://ci.appveyor.com/project/haraldsteinlechner/walkthrough)
 [![Build Status](https://travis-ci.org/aardvark-platform/walkthrough.svg?branch=master)](https://travis-ci.org/aardvark-platform/walkthrough)
-[![Join the chat at https://gitter.im/aardvark-platform/Lobby](https://img.shields.io/badge/gitter-join%20chat-blue.svg)](https://gitter.im/aardvark-platform/Lobby)
+[![Discord](https://badgen.net/discord/online-members/UyecnhM)](https://discord.gg/UyecnhM)
 [![license](https://img.shields.io/github/license/aardvark-platform/template.svg)](https://github.com/aardvark-platform/template/blob/master/LICENSE)
 
 [The Aardvark Platform](https://aardvarkians.com/) |
