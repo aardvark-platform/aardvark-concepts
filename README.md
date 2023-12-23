@@ -15,17 +15,14 @@ This repository contains some simple demos using different parts of the aardvark
 
 This demo repository should be seen additionally to the more specific examples hosted in the respective repositories such as:
  - [Aardvark.Rendering](https://github.com/aardvark-platform/aardvark.rendering) provides a huge set of nice and platform-independent examples for [.net core](https://github.com/aardvark-platform/aardvark.rendering/tree/master/src/Examples%20(netcore)) ranging from [HelloWorld](https://github.com/aardvark-platform/aardvark.rendering/blob/master/src/Examples%20(netcore)/00%20-%20HelloWorld/Program.fs) to more complex examples such as [n-body using compute](https://github.com/aardvark-platform/aardvark.rendering/blob/master/src/Examples%20(netcore)/10%20-%20NBodyCompute/Program.fs).
- - [Aardvark.Base](https://github.com/aardvark-platform/aardvark.base)'s documentation is scattered in the rest of the examples but cheatsheets for some important topics can be found in the [wiki](https://github.com/aardvark-platform/aardvark.docs/wiki) e.g.:
-    * [Vectores and Matrices](https://github.com/aardvark-platform/aardvark.docs/wiki/Vectors-and-Matrices)
-    * [Transformations](https://github.com/aardvark-platform/aardvark.docs/wiki/Transformations)
-    * [Images](https://github.com/aardvark-platform/aardvark.docs/wiki/Images)
+ - [Aardvark.Base](https://github.com/aardvark-platform/aardvark.base)'s documentation is found in [the Aardvark.Base wiki](https://github.com/aardvark-platform/aardvark.base/wiki).  Example: [The Api Cheatsheet](https://github.com/aardvark-platform/aardvark.base/wiki/API-Reference). Some important topics can be found in the [wiki](https://github.com/aardvark-platform/aardvark.docs/wiki) 
    
    Additionaly, there are examples on some important topics, in the [demo folder](https://github.com/aardvark-platform/aardvark.base/tree/master/src/Demo), e.g.:
     * [Incremental primitives for C#](https://github.com/aardvark-platform/aardvark.base/blob/master/src/Demo/IncrementalDemo.CSharp/Program.cs)
     * [Working with PixImages](https://github.com/aardvark-platform/aardvark.base/blob/master/src/Demo/PixImageDemo/Program.cs)
- - [Aardvark.Media](https://github.com/aardvark-platform/aardvark.media) contains [lots of examples](https://github.com/aardvark-platform/aardvark.media/tree/master/src/Examples%20(dotnetcore)) as well.
+ - [Aardvark.Media](https://github.com/aardvark-platform/aardvark.media) contains [lots of examples](https://github.com/aardvark-platform/aardvark.media/tree/master/src/Examples%20(dotnetcore)) as well. Documentation and a guided walkthrough is [in the Aardvark.Media wiki](https://github.com/aardvark-platform/aardvark.media/wiki).
 
-Topics concerning development environment, tooling, articles and papers can be found in the [wiki](https://github.com/aardvark-platform/aardvark.docs/wiki) as well. Ask further questions in our discord server, linked at the top of this readme.
+Topics concerning development environment, tooling, articles and papers can be found in [the aardvark.docs wiki](https://github.com/aardvark-platform/aardvark.docs/wiki). Our own lecture notes and videos can be found in [this repository's wiki](https://github.com/aardvark-platform/aardvark-concepts/wiki). Ask further questions in our discord server, linked at the top of this readme.
 
 Aardvark.Rendering is used in industry and research projects, e.g. [Hilite](). Videos showcasing aardvark functionality can be found here:
  - [Hilite lighting design](https://www.youtube.com/watch?v=WPgy4ZZ_i2w&t=231s), [Hilite Architectural Visualization](https://www.youtube.com/watch?v=5JGXM7jDOFM)
