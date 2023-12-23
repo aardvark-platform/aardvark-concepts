@@ -9,7 +9,7 @@
 [Quickstart](https://github.com/aardvarkplatform/aardvark.docs/wiki/Quickstart-Windows) | 
 [Status](https://github.com/aardvarkplatform/aardvark.docs/wiki/Status)
 
-This repository hosts documentation for the open-source [Aardvark platform](https://github.com/aardvark-platform/aardvark.docs/wiki) for visual computing, real-time graphics and visualization. [This repository's wiki](https://github.com/aardvark-platform/aardvark-concepts/wiki) hosts lecture notes, paper concepts and videos related to Aardvark.
+This repository hosts documentation for the open-source Aardvark platform for visual computing, real-time graphics and visualization. [This repository's wiki](https://github.com/aardvark-platform/aardvark-concepts/wiki) hosts lecture notes, paper concepts and videos related to Aardvark. For technical documentation regarding Aardvark, please [see the aardvark.docs wiki](https://github.com/aardvark-platform/aardvark.docs/wiki).
 
 This repository contains some simple demos using different parts of the aardvark platform and shows the interplay of the the platform repositories:
  - [aardvark.rendering](https://github.com/aardvark-platform/aardvark.rendering) for efficient rendering.
