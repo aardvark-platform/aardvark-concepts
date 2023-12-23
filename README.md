@@ -1,20 +1,17 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/iw34n5v1dbl330jl?svg=true)](https://ci.appveyor.com/project/haraldsteinlechner/walkthrough)
-[![Build Status](https://travis-ci.org/aardvark-platform/walkthrough.svg?branch=master)](https://travis-ci.org/aardvark-platform/walkthrough)
 [![Discord](https://badgen.net/discord/online-members/UyecnhM)](https://discord.gg/UyecnhM)
 [![license](https://img.shields.io/github/license/aardvark-platform/template.svg)](https://github.com/aardvark-platform/template/blob/master/LICENSE)
 
 [The Aardvark Platform](https://aardvarkians.com/) |
-[Wiki](https://github.com/aardvark-platform/aardvark-concepts/wiki) | 
-[Gallery](https://github.com/aardvarkplatform/aardvark.docs/wiki/Gallery) | 
-[Quickstart](https://github.com/aardvarkplatform/aardvark.docs/wiki/Quickstart-Windows) | 
-[Status](https://github.com/aardvarkplatform/aardvark.docs/wiki/Status)
+[Gallery](https://github.com/aardvark-platform/aardvark.docs/wiki/Gallery) | 
+[Packages&Repositories](https://github.com/aardvark-platform/aardvark.docs/wiki/Packages-and-Repositories)
 
 This repository hosts documentation for the open-source Aardvark platform for visual computing, real-time graphics and visualization. [This repository's wiki](https://github.com/aardvark-platform/aardvark-concepts/wiki) hosts lecture notes, paper concepts and videos related to Aardvark. For technical documentation regarding Aardvark, please [see the aardvark.docs wiki](https://github.com/aardvark-platform/aardvark.docs/wiki).
+
+# Detailed Walkthrough
 
 This repository contains some simple demos using different parts of the aardvark platform and shows the interplay of the the platform repositories:
  - [aardvark.rendering](https://github.com/aardvark-platform/aardvark.rendering) for efficient rendering.
  - [aardvark.media](https://github.com/aardvark-platform/aardvark.media) for purely functional high performance user interfaces and interactions.
-
 
 This demo repository should be seen additionally to the more specific examples hosted in the respective repositories such as:
  - [Aardvark.Rendering](https://github.com/aardvark-platform/aardvark.rendering) provides a huge set of nice and platform-independent examples for [.net core](https://github.com/aardvark-platform/aardvark.rendering/tree/master/src/Examples%20(netcore)) ranging from [HelloWorld](https://github.com/aardvark-platform/aardvark.rendering/blob/master/src/Examples%20(netcore)/00%20-%20HelloWorld/Program.fs) to more complex examples such as [n-body using compute](https://github.com/aardvark-platform/aardvark.rendering/blob/master/src/Examples%20(netcore)/10%20-%20NBodyCompute/Program.fs).
