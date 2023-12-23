@@ -25,7 +25,7 @@ This demo repository should be seen additionally to the more specific examples h
     * [Working with PixImages](https://github.com/aardvark-platform/aardvark.base/blob/master/src/Demo/PixImageDemo/Program.cs)
  - [Aardvark.Media](https://github.com/aardvark-platform/aardvark.media) contains [lots of examples](https://github.com/aardvark-platform/aardvark.media/tree/master/src/Examples%20(dotnetcore)) as well.
 
-Topics concerning development environment, tooling, articles and papers can be found in the [wiki](https://github.com/aardvark-platform/aardvark.docs/wiki) as well. Additionally to [gitter](https://gitter.im/aardvark-platform/Lobby) chatrooms, we have a [QA-platform: http://ask.aardvark.graphics](http://ask.aardvark.graphics/).
+Topics concerning development environment, tooling, articles and papers can be found in the [wiki](https://github.com/aardvark-platform/aardvark.docs/wiki) as well. Ask further questions in our discord server, linked at the top of this readme.
 
 Aardvark.Rendering is used in industry and research projects, e.g. [Hilite](). Videos showcasing aardvark functionality can be found here:
  - [Hilite lighting design](https://www.youtube.com/watch?v=WPgy4ZZ_i2w&t=231s), [Hilite Architectural Visualization](https://www.youtube.com/watch?v=5JGXM7jDOFM)
