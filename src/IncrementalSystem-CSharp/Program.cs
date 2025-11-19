@@ -8,7 +8,7 @@ namespace IncrementalSystem_CSharp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             // Create a modref cell. can be changed via side effects
             var input = new ChangeableValue<int>(10);

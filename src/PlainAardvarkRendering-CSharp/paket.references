@@ -1,12 +1,13 @@
 FSharp.Core
 
+CSharp.Data.Adaptive
 Aardvark.Base
 Aardvark.Base.Incremental
 Aardvark.Base.FSharp
 
 Aardvark.Rendering
-Aardvark.Application.Slim
+Aardvark.SceneGraph
+Aardvark.SceneGraph.Assimp
+
 Aardvark.Application.Slim.GL
 Aardvark.Application.Slim.Vulkan
-Aardvark.SceneGraph
-Aardvark.SceneGraph.IO

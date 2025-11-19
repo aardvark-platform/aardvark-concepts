@@ -1,7 +1,6 @@
 namespace FunctionalFrontend
 
 open FSharp.Data.Adaptive
-open System
 open Aardvark.Base
 open Aardvark.UI
 open Aardvark.UI.Primitives
@@ -18,13 +17,13 @@ module App =
 
     let update (m : Model) (msg : Message) =
         match msg with
-            | ToggleModel -> 
-                match m.currentModel with
-                    | Box -> { m with currentModel = Sphere }
-                    | Sphere -> { m with currentModel = Box }
+        | ToggleModel -> 
+            match m.currentModel with
+            | Box    -> { m with currentModel = Sphere }
+            | Sphere -> { m with currentModel = Box }
 
-            | CameraMessage msg ->
-                { m with cameraState = FreeFlyController.update m.cameraState msg }
+        | CameraMessage msg ->
+            { m with cameraState = FreeFlyController.update m.cameraState msg }
 
     let view (m : AdaptiveModel) =
 
@@ -35,8 +34,8 @@ module App =
         let sg =
             m.currentModel |> AVal.map (fun v ->
                 match v with
-                    | Box -> Sg.box (AVal.constant C4b.Red) (AVal.constant (Box3d(-V3d.III, V3d.III)))
-                    | Sphere -> Sg.sphere 5 (AVal.constant C4b.Green) (AVal.constant 1.0)
+                | Box -> Sg.box (AVal.constant C4b.Red) (AVal.constant (Box3d(-V3d.III, V3d.III)))
+                | Sphere -> Sg.sphere 5 (AVal.constant C4b.Green) (AVal.constant 1.0)
             )
             |> Sg.dynamic
             |> Sg.shader {
@@ -58,11 +57,11 @@ module App =
 
         ]
 
-    let app =
+    let app : App<_,_,_> =
         {
-            initial = initial
-            update = update
-            view = view
-            threads = fun m -> m.cameraState |> FreeFlyController.threads |> ThreadPool.map CameraMessage
+            initial   = initial
+            update    = update
+            view      = view
+            threads   = fun m -> m.cameraState |> FreeFlyController.threads |> ThreadPool.map CameraMessage
             unpersist = Unpersist.instance
         }

@@ -1,14 +1,11 @@
 ﻿module DynamicSceneData 
 
-open System
 open Aardvark.Base
 open Aardvark.Rendering
 open FSharp.Data.Adaptive
 open Aardvark.SceneGraph
 open Aardvark.Application
 open Aardvark.Application.Slim
-open Aardvark.SceneGraph.IO
-open FSharp.Data.Adaptive.Operators
 
 let run () = 
 
@@ -19,7 +16,7 @@ let run () =
     // of course you can a custum form and add a control to it.
     // Note that there is also a WPF binding for OpenGL. For more complex GUIs however,
     // we recommend using aardvark-media anyways..
-    let win = app.CreateGameWindow(samples = 8)
+    use win = app.CreateGameWindow(samples = 8)
 
     // Given eye, target and sky vector we compute our initial camera pose
     let initialView = CameraView.LookAt(V3d(3.0,3.0,3.0), V3d.Zero, V3d.OOI)
@@ -55,15 +52,6 @@ let run () =
                 ()
     )
 
-    let objects = 
-        objectPositions |> ASet.map (fun p -> 
-            let b = Box3d.FromCenterAndSize(V3d.Zero,V3d.III * 0.2)
-            let obj = Sg.box' C4b.Green b
-            Sg.translate p.X p.Y p.Z obj
-        )
-
-    let scene = Sg.set objects
-
     let timeDependentRotation = 
         let sw = System.Diagnostics.Stopwatch.StartNew()
         win.Time |> AVal.map (fun _ -> 
@@ -78,7 +66,7 @@ let run () =
             |> Sg.translate p.X p.Y p.Z 
         )
 
-    //let scene = Sg.set objects
+    let scene = Sg.set objects
 
     let sg =
         scene
@@ -94,7 +82,7 @@ let run () =
             |> Sg.projTrafo (frustum |> AVal.map Frustum.projTrafo    )
 
 
-    let renderTask = 
+    use renderTask = 
         // compile the scene graph into a render task
         app.Runtime.CompileRender(win.FramebufferSignature, sg)
 

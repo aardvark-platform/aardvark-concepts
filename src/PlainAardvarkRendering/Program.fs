@@ -7,7 +7,7 @@ open Aardvark.Application
 open Aardvark.Application.Slim
 
 [<EntryPoint>]
-let main argv = 
+let main _argv = 
  
     // first we need to initialize Aardvark's core components
     Aardvark.Init()
@@ -19,7 +19,7 @@ let main argv =
     // of course you can a custum form and add a control to it.
     // Note that there is also a WPF binding for OpenGL. For more complex GUIs however,
     // we recommend using aardvark-media anyways..
-    let win = app.CreateGameWindow(samples = 8)
+    use win = app.CreateGameWindow(samples = 8)
     //win.Title <- "Hello Aardvark"
 
     // Given eye, target and sky vector we compute our initial camera pose
@@ -70,11 +70,12 @@ let main argv =
             |> Sg.projTrafo (frustum |> AVal.map Frustum.projTrafo    )
 
 
-    let renderTask = 
+    use renderTask = 
         // compile the scene graph into a render task
         app.Runtime.CompileRender(win.FramebufferSignature, sg)
 
     // assign the render task to our window...
     win.RenderTask <- renderTask
     win.Run()
+
     0

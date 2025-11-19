@@ -1,18 +1,18 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31205.134
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11205.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FunctionalFrontend", "FunctionalFrontend\FunctionalFrontend.fsproj", "{EED0E8CF-E3DE-479C-80B1-F51F4711B5A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlainAardvarkRendering-NetFramework", "PlainAardvarkRendering-NetFramework\PlainAardvarkRendering-NetFramework.csproj", "{9CB14294-B4AD-48F3-865A-ED0864451B2C}"
-EndProject
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "PlainAardvarkRendering-NetCore", "PlainAardvarkRendering-NetCore\PlainAardvarkRendering-NetCore.fsproj", "{943505AD-D367-40BF-A71A-C0B67EE3EC73}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "PlainAardvarkRendering", "PlainAardvarkRendering\PlainAardvarkRendering.fsproj", "{943505AD-D367-40BF-A71A-C0B67EE3EC73}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "WalkThroughSceneGraph", "WalkThroughSceneGraph\WalkThroughSceneGraph.fsproj", "{4D1839AA-B2D6-471D-BC70-F38868325E2E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IncrementalSystem-CSharp", "IncrementalSystem-CSharp\IncrementalSystem-CSharp.csproj", "{4BD6522E-0C35-400D-A243-D87D18C7F539}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "MovingAardvark", "MovingAardvark\MovingAardvark.fsproj", "{E19CECD5-6714-4FD0-A2A9-16A52042BD09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlainAardvarkRendering-CSharp", "PlainAardvarkRendering-CSharp\PlainAardvarkRendering-CSharp.csproj", "{8F177BD0-10A9-1B29-ACBB-9FF58EFA8E21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,10 +24,6 @@ Global
 		{EED0E8CF-E3DE-479C-80B1-F51F4711B5A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EED0E8CF-E3DE-479C-80B1-F51F4711B5A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EED0E8CF-E3DE-479C-80B1-F51F4711B5A4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CB14294-B4AD-48F3-865A-ED0864451B2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CB14294-B4AD-48F3-865A-ED0864451B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CB14294-B4AD-48F3-865A-ED0864451B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CB14294-B4AD-48F3-865A-ED0864451B2C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{943505AD-D367-40BF-A71A-C0B67EE3EC73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{943505AD-D367-40BF-A71A-C0B67EE3EC73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{943505AD-D367-40BF-A71A-C0B67EE3EC73}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -44,6 +40,10 @@ Global
 		{E19CECD5-6714-4FD0-A2A9-16A52042BD09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E19CECD5-6714-4FD0-A2A9-16A52042BD09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E19CECD5-6714-4FD0-A2A9-16A52042BD09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F177BD0-10A9-1B29-ACBB-9FF58EFA8E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F177BD0-10A9-1B29-ACBB-9FF58EFA8E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F177BD0-10A9-1B29-ACBB-9FF58EFA8E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F177BD0-10A9-1B29-ACBB-9FF58EFA8E21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

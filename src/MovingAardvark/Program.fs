@@ -1,16 +1,14 @@
-﻿open System
-open System.Diagnostics
+﻿open System.Diagnostics
 open Aardvark.Base
 open Aardvark.Rendering
 open FSharp.Data.Adaptive
 open Aardvark.SceneGraph
-open Aardvark.SceneGraph.IO
+open Aardvark.SceneGraph.Assimp
 open Aardvark.Application
 open Aardvark.Application.Slim
-open System.Threading
 
 [<EntryPoint>]
-let main argv = 
+let main _argv = 
  
     // first we need to initialize Aardvark's core components
     Aardvark.Init()
@@ -20,9 +18,8 @@ let main argv =
     use app = new OpenGlApplication()
 
     // GameWindow is a GLFW window underneath.
-    let win = app.CreateGameWindow(samples = 8)
+    use win = app.CreateGameWindow(samples = 8)
     win.Focus()
-
 
     // load the aardvark model
     let modelPath = Path.combine [__SOURCE_DIRECTORY__; ".."; ".."; "data"; "aardvark"; "aardvark.obj" ]
@@ -79,8 +76,6 @@ let main argv =
     // the aardvark's speed
     let speed = 1.5
 
-    
-
     // whenever an image is rendered and the "move vector" is not
     // zero we step the aardvarkTrafo accordingly.
     // Note that there is no "game-loop" but instead the rendering
@@ -93,7 +88,6 @@ let main argv =
     win.BeforeRender.Add(fun () ->
         sw.Restart()
     )
-
 
     win.AfterRender.Add(fun () ->
         sw.Stop()
@@ -138,7 +132,6 @@ let main argv =
             // near plane 0.1, far plane 50.0 and aspect ratio x/y.
             |> AVal.map (fun s -> Frustum.perspective 60.0 0.1 50.0 (float s.X / float s.Y))
 
-
     let sg =
         Sg.ofList [ 
             aardvark
@@ -151,11 +144,12 @@ let main argv =
         |> Sg.projTrafo (frustum |> AVal.map Frustum.projTrafo    )
 
 
-    let renderTask = 
+    use renderTask = 
         // compile the scene graph into a render task
         app.Runtime.CompileRender(win.FramebufferSignature, sg)
 
     // assign the render task to our window...
     win.RenderTask <- renderTask
     win.Run()
+
     0

@@ -1,10 +1,4 @@
-﻿open System
-open Aardvark.Base
-open Aardvark.Rendering
-open FSharp.Data.Adaptive
-open Aardvark.SceneGraph
-open Aardvark.Application
-open Aardvark.Application.Slim
+﻿open Aardvark.Base
 
 type DemoType = 
     | SceneGraphConcept
@@ -14,7 +8,7 @@ type DemoType =
     | AdaptiveDSL
 
 [<EntryPoint>]
-let main argv = 
+let main _argv = 
  
     let demo = DemoType.ExtendingSceneGraphs
 
@@ -22,22 +16,10 @@ let main argv =
     Aardvark.Init()
 
     match demo with
-        | SceneGraphConcept -> 
-            Concept.Test.run()
-            0
+    | SceneGraphConcept    -> Concept.Test.run()
+    | ExtendingSceneGraphs -> ExtendingSceneGraphs.run()
+    | DynamicPointCloud    -> DynamicPointCloud.run()
+    | DynamicSceneData     -> DynamicSceneData.run()
+    | AdaptiveDSL          -> AdaptiveDSLApproach.run()
 
-        | ExtendingSceneGraphs -> 
-            ExtendingSceneGraphs.run()
-            0
-
-        | DynamicPointCloud -> 
-            DynamicPointCloud.run()
-            0
-
-        | DynamicSceneData -> 
-            DynamicSceneData.run()
-            0
-
-        | AdaptiveDSL -> 
-            AdaptiveDSLApproach.run()
-            0
+    0

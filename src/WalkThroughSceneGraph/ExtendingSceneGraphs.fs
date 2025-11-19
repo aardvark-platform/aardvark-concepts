@@ -1,13 +1,12 @@
 ﻿module ExtendingSceneGraphs 
 
-open System
 open Aardvark.Base
 open Aardvark.Rendering
 open FSharp.Data.Adaptive
 open Aardvark.SceneGraph
 open Aardvark.Application
 open Aardvark.Application.Slim
-open Aardvark.SceneGraph.IO
+open Aardvark.SceneGraph.Assimp
 open FSharp.Data.Adaptive.Operators
 
 let run () = 
@@ -19,7 +18,7 @@ let run () =
     // of course you can a custum form and add a control to it.
     // Note that there is also a WPF binding for OpenGL. For more complex GUIs however,
     // we recommend using aardvark-media anyways..
-    let win = app.CreateGameWindow(samples = 8)
+    use win = app.CreateGameWindow(samples = 8)
 
     // Given eye, target and sky vector we compute our initial camera pose
     let initialView = CameraView.LookAt(V3d(3.0,3.0,3.0), V3d.Zero, V3d.OOI)
@@ -51,19 +50,10 @@ let run () =
                do! DefaultSurfaces.simpleLighting
            }
 
-    let spheres = 
-        [
-            for x in -3.0 .. 3.0 do
-                for y in -3.0 .. 3.0 do
-                    yield 
-                        Sg.sphere' 4 C4b.White 0.1
-                        |> Sg.translate x y 0.0
-        ] |> Sg.ofSeq
-
     let lodDecider (threshhold : float) (scope : LodScope) =
         (scope.bb.Center - scope.cameraPosition).Length < threshhold
 
-    let manyObjects =
+    let scene =
         [
             for x in -3.0 .. 3.0 do
                 for y in -3.0 .. 3.0 do
@@ -75,10 +65,6 @@ let run () =
                             |> Sg.scale 0.4
                             |> Sg.translate x y 0.0
         ] |> Sg.ofSeq
-
-    let scene = aardvark
-    //let scene = spheres
-    //let scene = manyObjects
 
     let sg =
         scene
@@ -94,7 +80,7 @@ let run () =
             // compute a projection trafo, given the frustum contained in frustum
             |> Sg.projTrafo (frustum |> AVal.map Frustum.projTrafo    )
 
-    let renderTask = 
+    use renderTask = 
         // compile the scene graph into a render task
         app.Runtime.CompileRender(win.FramebufferSignature, sg)
 
